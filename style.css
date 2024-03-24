@@ -1,0 +1,514 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    overflow-x: hidden;
+  }
+
+  /* --------  MAIN  ---------  */
+  main{
+    height: 100vh;
+    width: 100%;
+    background-image: url('animes/fundo-geral.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+  /* --------  NAVBAR  ---------  */
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.651) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    padding: 1em;
+    padding: 0 50px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+    color: white;
+}
+
+#toggleLinks {
+    display: none;
+    border: none;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+  /* --------  HOME  ---------  */
+
+.scrollDown{
+  display: none;
+}
+
+#home{
+    height: 90%;
+    width: 100%;
+    background-image: linear-gradient(to top, #f9f7f700 0%, rgba(255, 255, 255, 0) 10%, black 10%, #33333307 100%);
+}
+
+#home #titles{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    height: auto;
+    margin-top: 100px ;
+}
+
+.titleBleach, .titleOp, .titleNaruto{
+    display: flex;
+    height: 550px;
+    width: 500px;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+}
+
+
+.titleNaruto img {
+    max-height: 200px;
+    opacity: 0;
+    transition: opacity 0.5s ease; 
+    margin-bottom: 70px;
+}
+.titleBleach img{
+    max-height: 300px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.titleOp img{
+    max-height: 150px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin-bottom: 100px;
+}
+
+
+.titleBleach:hover img,
+.titleOp:hover img,
+.titleNaruto:hover img {
+    opacity: 1;
+}
+
+
+/* --------  SLIDERS  ---------  */
+.sliders{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow-x: hidden; 
+  overflow-y: hidden;
+  width: 100%;   
+}
+
+.sliders > div {
+  flex: 0 0 100%; 
+}
+
+#naruto{
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-snap-align: start;
+  background-image: url(/animes/fundo-naruto.jpg);
+}
+
+#bleach{
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-snap-align: start;
+  background-image: url(/animes/fundo-bleach3.jpg);
+}
+
+#onePiece{
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-snap-align: start;
+  background-image: url(/animes/onepieceback.jpeg);
+}
+
+.content{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.745);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.sliderButton {
+  position: absolute;
+  margin-top: 25%;
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.left {
+  left: 20px;
+}
+
+.right {
+  right: 20px;
+}
+
+
+.container{
+  background-color: white;
+}
+
+
+.card {
+  flex-basis: calc(15% - 10px); 
+  margin: 50px; 
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 200px;
+  border-radius: 10px;
+  color: black;
+  padding: 20px 5px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.card h2 {
+  margin: 10px;
+  margin-top: 5px;
+}
+
+
+/* --------  QUIZ GAME  ---------  */
+
+textarea:focus,
+input:focus,
+select:focus,
+button:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+.hide {
+  display: none !important;
+}
+
+.quizSection{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.quizSection h1{
+  color: white;
+  font-size: 3em;
+}
+
+#quizz-container,
+#score-container {
+  color: white;
+  text-align: center;
+  padding: 25px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 7px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #13007c;
+}
+
+#quizz-container,
+#score-container {
+  width: 500px;
+  max-width: 90%;
+}
+
+#score-container p {
+  margin: 20px 0;
+}
+
+#score-container #display-score {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#correct-answers {
+  font-weight: bold;
+  color: #2eb94c;
+}
+
+#questions-qty {
+  font-weight: bold;
+  color: #00c9c8;
+}
+
+#restart {
+  background-color: #00c9c8;
+  color: #ffffff;
+  font-weight: bold;
+  height: 50px;
+  border: 1px solid #e0e0e0;
+  width: 180px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#restart:hover {
+  background-color: #2a272a;
+  color: #ffffff;
+}
+
+#question {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+#answers-box button {
+  display: flex;
+  align-items: stretch;
+  margin: 15px 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  color: #222222;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#answers-box button:hover {
+  background-color: #2a272a;
+  color: #fff;
+}
+
+#answers-box .btn-letter {
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #2a272a;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 0;
+  padding: 5px;
+  max-width: 40px;
+  border-radius: 50%;
+}
+
+.question-answer {
+  flex: 1 1 0;
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+#quizz-container .wrong-answer,
+#quizz-container .wrong-answer .btn-letter {
+  background-color: #e62210;
+  color: #fff;
+  border: none;
+}
+
+#quizz-container .correct-answer,
+#quizz-container .correct-answer .btn-letter {
+  background-color: #2eb94c;
+  color: #fff;
+  border: none;
+}
+
+
+/* Adicione suas regras de CSS existentes aqui */
+
+@media (max-width: 480px) {
+  main {
+    width: 100%;
+    height: 100%;
+    background: url(/animes/back-geral-mobile.jpg);
+    background-size: cover;
+  }
+
+
+  .scrollDown{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+  }
+
+  .scrollDown a{
+    text-decoration: none;
+    border: none;
+  }
+
+
+  .scrollDown h3{
+    background-color: white;
+    font-weight: 700;
+    color: black;
+    border-radius: 20px;
+    padding: 10px 15px;
+  }
+
+
+  nav {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.349);
+    width: 100%;
+  }
+
+  nav ul {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 20px;
+      padding: 0;
+  }
+
+  nav ul li {
+      padding: 0.5em;
+  }
+
+  nav ul li a {
+      padding: 10px;
+      text-decoration: none;
+  }
+
+  #titles{
+    display: none;
+  }
+
+  #toggleLinks {
+    display: block;
+    align-items: end;
+    justify-content: center;
+    margin-left: 150px;
+  }
+  
+  .sliders{
+    height: 860px;
+  }  
+
+  .sliderButton {   
+    margin-top: 90%;    
+  }
+  
+  #naruto{
+    height: 100%;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    scroll-snap-align: start;
+    background-image: url(/animes/back-naruto-mobile.jpg);
+    background-size: cover;
+  }
+  
+  #bleach{
+    height: 100%;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    scroll-snap-align: start;
+    background-image: url(/animes/back-bleach-mobile.png);
+    background-size: cover;
+  }
+  
+  #onePiece{
+    height: 100%;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    scroll-snap-align: start;
+    background-image: url(/animes/back-onepiece-mobil.jpg);
+    background-size: cover;
+  }
+
+  .content {
+    display: grid;
+    width: 85%;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(4, auto); 
+    padding: 20px 60px;
+  }
+
+  .card {
+    width: 85%; 
+    height: 130px;
+    margin: 0; 
+  }
+
+  .card h2{
+    font-size: 1.2em;
+  }
+
+  .card blockquote{
+    font-size: 0.8em;
+  }
+
+  
+
+  #quizz{
+    width: 100%;
+    height: 650px;
+  }
+
+  #quizz-container,
+  #score-container {
+    width: 70%; 
+    margin: 20px; 
+  }
+}
+
+
